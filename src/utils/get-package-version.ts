@@ -1,9 +1,9 @@
 /**
  * @internal
  */
-export function getPackageVersion(moduleName: string): string | undefined {
+export function getPackageVersion(moduleNames: string): string | undefined {
   try {
-    return require(`${moduleName}/package.json`).version as string
+    return require(`${moduleNames}/package.json`).version as string
   } catch (err) {}
 
   return
