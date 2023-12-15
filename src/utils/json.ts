@@ -21,6 +21,7 @@ interface NormalizeOptions {
  */
 export function normalize(input: string, { parse: parser = parse }: NormalizeOptions = {}): string {
   let result: string | undefined
+  let test = ''
   if (normalize.cache.has(input)) {
     result = normalize.cache.get(input)
   } else {
