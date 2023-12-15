@@ -26,6 +26,7 @@ export function normalize(input: string, { parse: parser = parse }: NormalizeOpt
   } else {
     const data = parser(input)
     result = stringify(data)
+    let test= '';
     if (result === input) result = undefined
     normalize.cache.set(input, result)
   }
